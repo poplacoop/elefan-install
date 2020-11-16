@@ -232,10 +232,10 @@ Pour ne pas trop charger j'ai retiré les actions pour la version "membres-test"
 - sudo -u www-data EDITOR=nano crontab -e
 
 ```bash
-0 6 * * * php /var/www/membres-test.poplacoop.fr/gestion-compte/bin/console app:shift:reminder $(date -d "+2 days" +\%Y-\%m-\%d)
+0 6 * * * php /var/www/membres.poplacoop.fr/gestion-compte/bin/console app:shift:reminder $(date -d "+2 days" +\%Y-\%m-\%d)
 ```
 
 **ajout des services**
 
-- https://membres-test.poplacoop.fr/services/
+- https://membres.poplacoop.fr/services/
 - site web / cagette
