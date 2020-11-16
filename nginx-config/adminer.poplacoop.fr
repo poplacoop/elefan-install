@@ -1,0 +1,17 @@
+server {
+    listen 80;
+    root /var/www/adminer;
+    index adminer.php;
+    server_name adminer.poplacoop.fr;
+    
+    location / {
+        try_files $uri $uri/ =404;
+    }
+    location ~ \.php$ {
+      include snippets/fastcgi-php.conf;
+      fastcgi_pass unix:/var/run/php/php7.3-fpm.sock;
+    }
+    
+    error_log /var/log/nginx/adminer_error.log;
+    access_log /var/log/nginx/adminer_access.log;
+}

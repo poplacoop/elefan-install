@@ -1,0 +1,105 @@
+parameters:
+    database_host: 127.0.0.1
+    database_port: 3306
+    database_name: gestion_compte
+    database_user: gestion_compte_user
+    database_password: ____complex-password____
+
+    super_admin.username: admin
+    super_admin.initial_password: ____complex-password____
+
+    mailer_transport: smtp
+    mailer_host: ssl0.ovh.net
+    mailer_port: 465
+    mailer_user: elefan@poplacoop.fr
+    mailer_password: _____________
+    mailer_encryption: ssl
+
+    # mail user used for transactional
+    transactional_mailer_user: elefan@poplacoop.fr
+    transactional_mailer_user_name: 'espace membre'
+
+    # The base domain used for mail addresses
+    emails.base_domain: poplacoop.fr
+
+    # Several email addresses, to be used as an associative array
+    emails.contact:
+        from_name: 'Contact '
+        address: contact@poplacoop.fr
+    emails.member:
+        from_name: 'Membres POP La Coop'
+        address: no-reply.elefan@poplacoop.fr
+    emails.shift:
+        from_name: 'Créneaux POP La Coop'
+        address: no-reply.elefan@poplacoop.fr
+    emails.formation:
+        from_name: 'Formation POP La Coop'
+        address: no-reply.elefan@poplacoop.fr
+    emails.admin:
+        from_name: 'Admin POP La Coop'
+        address: no-reply.elefan@
+    emails.noreply:
+        from_name: 'Ne pas répondre'
+        address: no-reply.elefan@poplacoop.fr
+
+    # Available emails in some mailing forms
+    emails.sendable:
+        - '%emails.contact%'
+        - '%emails.member%'
+        - '%emails.shift%'
+        - '%emails.formation%'
+        - '%emails.admin%'
+        - '%emails.noreply%'
+
+    shift_mailer_user: null
+
+    # A secret key that's used to generate certain security-related tokens
+    secret: 9FacZjoYfnGFbE5qtJ7onmvucUS6
+
+    #router https://symfony.com/doc/3.4/console/request_context.html
+    router.request_context.host: membres-test.poplacoop.fr
+    router.request_context.scheme: https
+    router.request_context.base_url: null
+
+    # Branding
+    site_name: 'Espace membre @ My POP La Coop'
+    project_name: 'My POP La Coop'
+    project_url: 'https://www.poplacoop.fr'
+    project_url_display: poplacoop.fr
+    main_color: '#87C6AF'
+    local_currency_name: 'monnaie locale'
+    #ip of the spot, comma separated if many
+    place_local_ip_address: '127.0.0.1,192.168.0.x'
+
+    wiki_keys_url: null
+
+    # Registration
+    registration_duration: '99 years'
+    helloasso_registration_campaign_url: 'https://www.helloasso.com/associations/my-local-coop/adhesions/re-adhesion'
+    helloasso_api_key: null
+    helloasso_api_password: null
+    helloasso_api_base_url: 'https://api.helloasso.com/v3/'
+
+    # Shifting configuration
+    due_duration_by_cycle: 180
+    min_shift_duration: 90
+    cycle_duration: '28 days'
+    maximum_nb_of_beneficiaries_in_membership: 2
+    new_users_start_as_beginner: false
+    unlimited_book_duration: false
+    display_gauge: true
+    use_fly_and_fixed: false
+
+    logging.mattermost.enabled: false
+    logging.mattermost.level: critical
+    logging.mattermost.url: 'http://mattermost.yourcoop.local'
+    logging.mattermost.channel: null
+
+    logging.swiftmailer.enabled: false
+    logging.swiftmailer.level: critical
+    logging.swiftmailer.recipient: null
+
+    code_generation_enabled: true
+
+    helloasso_campaign_id: null
+
