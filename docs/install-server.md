@@ -5,30 +5,30 @@ Entre autre, cette procédure :
 - installe les paquets nécéssaire (nginx, php, mariadb...)
 - installe l'app elefan et adminer 
 
-Ppour ne pas trop charger j'ai retiré les actions pour la version "membres-test" Elles sont similaire à "membres"
+Pour ne pas trop charger j'ai retiré les actions pour la version "membres-test" Elles sont similaire à "membres"
 
 ## ovh start guide
 
-**change password**
-passwd (change password for debian user)
-sudo passwd root (change root password)
-**update system**
-sudo apt update
-sudo apt upgrade
-**ssh change port and refuse root login for security**
-sudo nano /etc/ssh/sshd_config > change Port 4422
-sudo nano /etc/ssh/sshd_config > PermitRootLogin no
-sudo /etc/init.d/ssh restart
-**install Fail2ban**
-sudo apt install fail2ban
-sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.conf.backup
-sudo nano /etc/fail2ban/jail.conf (to change config)
-sudo /etc/init.d/fail2ban restart
-**firewall iptable**
-sudo iptables -L
-bloquer les requetes non souhaitées
-ovh propose aussi un parefeu web : https://docs.ovh.com/fr/dedicated/firewall-network/
-=> on va configurer le parefeu avec 'ufw' juste après
+- **change password**
+- passwd (change password for debian user)
+- sudo passwd root (change root password)
+- **update system**
+- sudo apt update
+- sudo apt upgrade
+- **ssh change port and refuse root login for security**
+- sudo nano /etc/ssh/sshd_config > change Port 4422
+- sudo nano /etc/ssh/sshd_config > PermitRootLogin no
+- sudo /etc/init.d/ssh restart
+- **install Fail2ban**
+- sudo apt install fail2ban
+- sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.conf.backup
+- sudo nano /etc/fail2ban/jail.conf (to change config)
+- sudo /etc/init.d/fail2ban restart
+- **firewall iptable**
+- sudo iptables -L
+- bloquer les requetes non souhaitées
+- ovh propose aussi un parefeu web : https://docs.ovh.com/fr/dedicated/firewall-network/
+- => on va configurer le parefeu avec 'ufw' juste après
 
 ## other set up
 
