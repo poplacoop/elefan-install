@@ -83,7 +83,7 @@ parameters:
     # Shifting configuration
     due_duration_by_cycle: 180
     min_shift_duration: 90
-    cycle_duration: '28 days'
+    cycle_duration: '7 days'
     maximum_nb_of_beneficiaries_in_membership: 2
     new_users_start_as_beginner: false
     unlimited_book_duration: false
