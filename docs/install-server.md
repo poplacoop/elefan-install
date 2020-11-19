@@ -233,6 +233,7 @@ Pour ne pas trop charger j'ai retiré les actions pour la version "membres-test"
 
 ```bash
 0 6 * * * php /var/www/membres.poplacoop.fr/gestion-compte/bin/console app:shift:reminder $(date -d "+2 days" +\%Y-\%m-\%d)
+55 5 * * * php /var/www/membres/bin/console app:shift:generate $(date -d "+27 days" +\%Y-\%m-\%d)
 ```
 
 **ajout des services**
