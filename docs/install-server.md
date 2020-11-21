@@ -51,6 +51,13 @@ Pour ne pas trop charger j'ai retiré les actions pour la version "membres-test"
 - User debian
 - Port 4422
 
+**change server timezone**
+
+- timedatectl
+- timedatectl list-timezones
+- sudo timedatectl set-timezone Europe/Paris   # <=====
+- timedatectl
+
 ## install firewall + nginx + mariaddb + php + composer + git
 
 **firewall**
