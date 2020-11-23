@@ -149,8 +149,9 @@ Pour ne pas trop charger j'ai retiré les actions pour la version "membres-test"
 **mariadb conf : prepare DB users for membres**
 
 - sudo mariadb
-- GRANT ALL ON gestion_compte.\* TO 'gestion_compte_user'@'localhost' IDENTIFIED BY 'complex-password' WITH GRANT OPTION;
+- GRANT ALL ON gestion_compte.* TO 'gestion_compte_user'@'localhost' IDENTIFIED BY 'complex-password' WITH GRANT OPTION;
 - FLUSH PRIVILEGES;
+- SHOW GRANTS for gestion_compte_user@localhost;
 - exit
 - sudo mariadb -u gestion_compte_user -p
 - SHOW DATABASES;
