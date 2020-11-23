@@ -16,7 +16,7 @@ parameters:
     mailer_encryption: ssl
 
     # mail user used for transactional
-    transactional_mailer_user: elefan@poplacoop.fr
+    transactional_mailer_user: contact@poplacoop.fr
     transactional_mailer_user_name: 'espace membre'
 
     # The base domain used for mail addresses
@@ -25,22 +25,22 @@ parameters:
     # Several email addresses, to be used as an associative array
     emails.contact:
         from_name: 'Contact '
-        address: contact@poplacoop.fr
+        address: support-membres@poplacoop.fr
     emails.member:
         from_name: 'Membres POP La Coop'
-        address: no-reply.elefan@poplacoop.fr
+        address: no-reply.membres@poplacoop.fr
     emails.shift:
         from_name: 'Créneaux POP La Coop'
-        address: no-reply.elefan@poplacoop.fr
+        address: no-reply.membres@poplacoop.fr
     emails.formation:
         from_name: 'Formation POP La Coop'
-        address: no-reply.elefan@poplacoop.fr
+        address: no-reply.membres@poplacoop.fr
     emails.admin:
         from_name: 'Admin POP La Coop'
         address: no-reply.elefan@
     emails.noreply:
         from_name: 'Ne pas répondre'
-        address: no-reply.elefan@poplacoop.fr
+        address: no-reply.membres@poplacoop.fr
 
     # Available emails in some mailing forms
     emails.sendable:

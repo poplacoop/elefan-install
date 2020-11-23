@@ -11,6 +11,7 @@ Notes technique concernant l'installation d'elefan.
 
 - gestion membres prod : https://membres.poplacoop.fr
 - gestion membres test : https://membres-test.poplacoop.fr
+- gestion membres test : https://membres-formation.poplacoop.fr
 - outil gestion base de données : https://adminer.poplacoop.fr
 
 ## architecture
@@ -29,3 +30,7 @@ Notes technique concernant l'installation d'elefan.
 ## commandes utiles pour la maintenance
 
 [doc/maintenance-server.md](docs/maintenance-server.md)
+
+## notes à propose de -test et -formation
+
+[doc/other-environments.md](docs/other-environments.md)
