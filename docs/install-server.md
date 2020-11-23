@@ -55,7 +55,7 @@ Pour ne pas trop charger j'ai retiré les actions pour la version "membres-test"
 
 - timedatectl
 - timedatectl list-timezones
-- sudo timedatectl set-timezone Europe/Paris   # <=====
+- sudo timedatectl set-timezone Europe/Paris # <=====
 - timedatectl
 
 ## install firewall + nginx + mariaddb + php + composer + git
@@ -156,6 +156,14 @@ Pour ne pas trop charger j'ai retiré les actions pour la version "membres-test"
 - SHOW DATABASES;
 - SHOW GRANTS;
 - exit
+
+## php config
+
+**change timezone**
+
+- sudo nano /etc/php/7.3/cli/php.ini
+- sudo nano /etc/php/7.3/fpm/php.ini
+- => `date.timezone="Europe/Paris"`
 
 ## install adminer
 
