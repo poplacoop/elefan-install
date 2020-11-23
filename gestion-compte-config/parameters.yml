@@ -16,7 +16,7 @@ parameters:
     mailer_encryption: ssl
 
     # mail user used for transactional
-    transactional_mailer_user: contact@poplacoop.fr
+    transactional_mailer_user: support-membres@poplacoop.fr
     transactional_mailer_user_name: 'espace membre'
 
     # The base domain used for mail addresses
