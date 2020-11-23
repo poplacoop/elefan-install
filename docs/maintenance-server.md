@@ -36,3 +36,9 @@
 **edit parameter.yml**
 
 - sudo nano /var/www/membres.poplacoop.fr/gestion-compte/app/config/parameters.yml
+
+**create new super admin**
+- cd /var/www/membres.poplacoop.fr/gestion-compte
+- sudo -u www-data php bin/console fos:user:create
+- sudo -u www-data php bin/console fos:user:promote
+  - role : ROLE_SUPER_ADMIN
