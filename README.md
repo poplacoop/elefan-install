@@ -31,6 +31,6 @@ Notes technique concernant l'installation d'elefan.
 
 [doc/maintenance-server.md](docs/maintenance-server.md)
 
-## notes à propose de -test et -formation
+## notes à propos de -test et -formation
 
 [doc/other-environments.md](docs/other-environments.md)
