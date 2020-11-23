@@ -1,6 +1,6 @@
 # Commandes utiles pour la maintenance
 
-**connect with SSH on port 4230**
+**connect with SSH**
 
 - ssh -p 4422 debian@vps-189ab9d8.vps.ovh.net
 
