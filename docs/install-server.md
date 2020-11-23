@@ -248,8 +248,29 @@ Pour ne pas trop charger j'ai retiré les actions pour la version "membres-test"
 - sudo -u www-data EDITOR=nano crontab -e
 
 ```bash
+# membres
+55 5 * * * php /var/www/membres.poplacoop.fr/gestion-compte/bin/console app:shift:generate $(date -d "+27 days" +\%Y-\%m-\%d)
+55 5 * * * php /var/www/membres.poplacoop.fr/gestion-compte/bin/console app:shift:free $(date -d "+21 days" +\%Y-\%m-\%d)
 0 6 * * * php /var/www/membres.poplacoop.fr/gestion-compte/bin/console app:shift:reminder $(date -d "+2 days" +\%Y-\%m-\%d)
-55 5 * * * php /var/www/membres/bin/console app:shift:generate $(date -d "+27 days" +\%Y-\%m-\%d)
+5 6 * * * php /var/www/membres.poplacoop.fr/gestion-compte/bin/console app:user:cycle_start
+0 10 * * * php /var/www/membres.poplacoop.fr/gestion-compte/bin/console app:shift:send_alerts $(date -d "+2 days" +\%Y-\%m-\%d) 1
+45 21 * * * php /var/www/membres.poplacoop.fr/gestion-compte/bin/console app:code:verify_change --last_run 24
+
+# membres-test
+55 5 * * * php /var/www/membres-test.poplacoop.fr/gestion-compte/bin/console app:shift:generate $(date -d "+27 days" +\%Y-\%m-\%d)
+55 5 * * * php /var/www/membres-test.poplacoop.fr/gestion-compte/bin/console app:shift:free $(date -d "+21 days" +\%Y-\%m-\%d)
+0 6 * * * php /var/www/membres-test.poplacoop.fr/gestion-compte/bin/console app:shift:reminder $(date -d "+2 days" +\%Y-\%m-\%d)
+5 6 * * * php /var/www/membres-test.poplacoop.fr/gestion-compte/bin/console app:user:cycle_start
+0 10 * * * php /var/www/membres-test.poplacoop.fr/gestion-compte/bin/console app:shift:send_alerts $(date -d "+2 days" +\%Y-\%m-\%d) 1
+45 21 * * * php /var/www/membres-test.poplacoop.fr/gestion-compte/bin/console app:code:verify_change --last_run 24
+
+# membres-formation
+55 5 * * * php /var/www/membres-formation.poplacoop.fr/gestion-compte/bin/console app:shift:generate $(date -d "+27 days" +\%Y-\%m-\%d)
+55 5 * * * php /var/www/membres-formation.poplacoop.fr/gestion-compte/bin/console app:shift:free $(date -d "+21 days" +\%Y-\%m-\%d)
+0 6 * * * php /var/www/membres-formation.poplacoop.fr/gestion-compte/bin/console app:shift:reminder $(date -d "+2 days" +\%Y-\%m-\%d)
+5 6 * * * php /var/www/membres-formation.poplacoop.fr/gestion-compte/bin/console app:user:cycle_start
+0 10 * * * php /var/www/membres-formation.poplacoop.fr/gestion-compte/bin/console app:shift:send_alerts $(date -d "+2 days" +\%Y-\%m-\%d) 1
+45 21 * * * php /var/www/membres-formation.poplacoop.fr/gestion-compte/bin/console app:code:verify_change --last_run 24
 ```
 
 **ajout des services**
