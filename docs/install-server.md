@@ -242,6 +242,7 @@ Pour ne pas trop charger j'ai retiré les actions pour la version "membres-test"
 - in parameters.yml : `new_users_start_as_beginner: false`
 
 **set up crontab**
+La CRONTAB est dans le /var/spool/cron directory
 
 - sudo -u www-data crontab -l
 - sudo -u www-data crontab -e
