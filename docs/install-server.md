@@ -251,11 +251,17 @@ La CRONTAB est dans le **/var/spool/cron directory**
 
 ```bash
 # membres
+#generate shifts in 27 days (same weekday as yesterday)
 55 5 * * * php /var/www/membres.poplacoop.fr/gestion-compte/bin/console app:shift:generate $(date -d "+27 days" +\%Y-\%m-\%d)
+#free pre-booked shifts
 55 5 * * * php /var/www/membres.poplacoop.fr/gestion-compte/bin/console app:shift:free $(date -d "+21 days" +\%Y-\%m-\%d)
+#send reminder 2 days before shift
 0 6 * * * php /var/www/membres.poplacoop.fr/gestion-compte/bin/console app:shift:reminder $(date -d "+2 days" +\%Y-\%m-\%d)
+#execute routine for cycle_end/cycle_start, everyday
 5 6 * * * php /var/www/membres.poplacoop.fr/gestion-compte/bin/console app:user:cycle_start
+#send alert on shifts booking (low)
 0 10 * * * php /var/www/membres.poplacoop.fr/gestion-compte/bin/console app:shift:send_alerts $(date -d "+2 days" +\%Y-\%m-\%d) 1
+#send a reminder mail to the user who generate the last code but did not validate the change.
 45 21 * * * php /var/www/membres.poplacoop.fr/gestion-compte/bin/console app:code:verify_change --last_run 24
 
 # membres-test
