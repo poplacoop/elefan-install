@@ -27,6 +27,9 @@ Notes technique concernant l'installation d'elefan.
 
 [doc/install-server.md](docs/install-server.md)
 
+[doc/doc1/install-server.md](docs/install-server.md)
+
+
 ## commandes utiles pour la maintenance
 
 [doc/maintenance-server.md](docs/maintenance-server.md)
