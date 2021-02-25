@@ -29,7 +29,9 @@ Pour ne pas trop charger j'ai retiré les actions pour la version "membres-test"
 
 - sudo apt update
 - sudo apt upgrade
-  **ssh change port and refuse root login for security**
+
+
+ **ssh change port and refuse root login for security**
 - sudo nano /etc/ssh/sshd_config > change Port 4422
 - sudo nano /etc/ssh/sshd_config > PermitRootLogin no
 - sudo /etc/init.d/ssh restart
