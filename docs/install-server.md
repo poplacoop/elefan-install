@@ -22,8 +22,8 @@ Pour ne pas trop charger j'ai retiré les actions pour la version "membres-test"
  - apt upgrade
  - apt install sudo
  - apt install usermod
- - usermod -ag sudo USERNAME
- -  reboot
+ - /sbin/usermod -ag sudo USERNAME
+ - /sbin/reboot
 
 **update system**
 
