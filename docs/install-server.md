@@ -15,6 +15,16 @@ Pour ne pas trop charger j'ai retiré les actions pour la version "membres-test"
 - passwd (change password for debian user)
 - sudo passwd root (change root password)
 
+**add debian user to the sudo group **
+ - su
+ - [enter password for your root user]
+ - apt update
+ - apt upgrade
+ - apt install sudo
+ - apt install usermod
+ - usermod -ag sudo USERNAME
+ -  reboot
+
 **update system**
 
 - sudo apt update
