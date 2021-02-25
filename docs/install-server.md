@@ -16,14 +16,14 @@ Pour ne pas trop charger j'ai retiré les actions pour la version "membres-test"
 - sudo passwd root (change root password)
 
 **add debian user to the sudo group **
- - su
- - [enter password for your root user]
- - apt update
- - apt upgrade
- - apt install sudo
- - apt install usermod
- - /sbin/usermod -ag sudo USERNAME
- - /sbin/reboot
+- su
+- [enter password for your root user]
+- apt update
+- apt upgrade
+- apt install sudo
+- apt install usermod
+- /sbin/usermod -ag sudo USERNAME
+- /sbin/reboot
 
 **update system**
 
@@ -31,7 +31,7 @@ Pour ne pas trop charger j'ai retiré les actions pour la version "membres-test"
 - sudo apt upgrade
 
 
- **ssh change port and refuse root login for security**
+**ssh change port and refuse root login for security**
 - sudo nano /etc/ssh/sshd_config > change Port 4422
 - sudo nano /etc/ssh/sshd_config > PermitRootLogin no
 - sudo /etc/init.d/ssh restart
