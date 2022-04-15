@@ -23,7 +23,11 @@
 - cd /var/www/membres.poplacoop.fr/gestion-compte
 - sudo -u www-data php bin/console
 
-**update app after changes in parameter.yml**
+**update parameter.yml (ajout ct 20220415)**
+- cd /var/www/membres.poplacoop.fr/gestion-compte/app/config
+- sudo nano parameters.yml
+
+**update app after changes in parameters.yml**
 
 - cd /var/www/membres.poplacoop.fr/gestion-compte
 - sudo -u www-data php bin/console cache:clear --env=prod --no-debug
